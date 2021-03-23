@@ -1,6 +1,6 @@
 {
     "name": "Transmission",
-    "version": "dev",
+    "version": "0.1",
     "slug": "transmission",
     "description": "The torrent client for Hass.io with OpenVPN support",
     "url": "https://github.com/pierrickrouxel/hassio-addon-transmission",
@@ -58,5 +58,6 @@
     },
     "environment": {
       "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
-    }
+    },
+    "image": "eightiesguy/transmission-addon"
   }
