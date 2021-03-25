@@ -2,7 +2,7 @@ ARG BUILD_FROM=hassioaddons/base:8.0.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-LABEL io.hass.version="0.2" io.hass.type="addon" io.hass.arch="armhf|aarch64|amd64"
+LABEL io.hass.version="0.2"
 
 # Copy root filesystem
 COPY rootfs /
@@ -48,7 +48,6 @@ LABEL \
     io.hass.description="The torrent client for Hass.io with OpenVPN support" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
-#    io.hass.version=${BUILD_VERSION} \
     maintainer="Pierrick Rouxel <pierrickrouxel@addons.community>" \
     org.label-schema.description="The torrent client for Hass.io" \
     org.label-schema.build-date=${BUILD_DATE} \
