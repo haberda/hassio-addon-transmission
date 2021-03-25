@@ -48,7 +48,7 @@ LABEL \
     io.hass.description="The torrent client for Hass.io with OpenVPN support" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
-    io.hass.version=${BUILD_VERSION} \
+#    io.hass.version=${BUILD_VERSION} \
     maintainer="Pierrick Rouxel <pierrickrouxel@addons.community>" \
     org.label-schema.description="The torrent client for Hass.io" \
     org.label-schema.build-date=${BUILD_DATE} \
