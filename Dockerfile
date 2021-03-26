@@ -2,7 +2,7 @@ ARG BUILD_FROM=hassioaddons/base:8.0.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-LABEL io.hass.version="0.2"
+LABEL io.hass.version="0.3"
 
 # Copy root filesystem
 COPY rootfs /
