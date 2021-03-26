@@ -2,10 +2,12 @@ ARG BUILD_FROM=hassioaddons/base:8.0.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-LABEL io.hass.version="0.3"
+LABEL io.hass.version="0.4"
 
 # Copy root filesystem
 COPY rootfs /
+
+RUN ["chmod", "+x", "/etc/openvpn/up-transmission.sh"]
 
 # Setup base
 RUN apk add --no-cache \
