@@ -68,7 +68,7 @@ Enable OpenVPN to anonymize your torrent activity.
 
 ### Option: `openvpn_config`
 
-The name of .ovpn file. You should put it in `/config/openvpn`.
+The name of .ovpn file WITHOUT the .ovpn extenstion (e.g. myFile.ovpn will be entered as myFile). Must be put it in `/config/openvpn`.
 
 ### Option: `openvpn_username`
 
