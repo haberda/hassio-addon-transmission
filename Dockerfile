@@ -2,8 +2,6 @@ ARG BUILD_FROM=hassioaddons/base:8.0.6
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-LABEL io.hass.version="0.6"
-
 # Copy root filesystem
 COPY rootfs /
 
@@ -47,16 +45,17 @@ ARG BUILD_VERSION
 # Labels
 LABEL \
     io.hass.name="Transmission" \
-    io.hass.description="The torrent client for Hass.io with OpenVPN support" \
+    io.hass.description="Torrent client for Home Assistant with OpenVPN support" \
     io.hass.arch="${BUILD_ARCH}" \
+    io.hass.version=${BUILD_VERSION} \
     io.hass.type="addon" \
-    maintainer="Pierrick Rouxel <pierrickrouxel@addons.community>" \
-    org.label-schema.description="The torrent client for Hass.io" \
+    maintainer="haberda" \
+    org.label-schema.description="Torrent client for Home Assistant with OpenVPN support" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Transmission" \
-    org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/pierrickrouxel" \
-    org.label-schema.usage="https://github.com/pierrickrouxel/hassio-addon-transmission/tree/master/README.md" \
+    org.label-schema.schema-version=${BUILD_VERSION} \
+    org.label-schema.url="https://github.com/haberda/hassio-addon-transmission" \
+    org.label-schema.usage="https://github.com/haberda/hassio-addon-transmission/tree/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/pierrickrouxel" \
-    org.label-schema.vendor="Community Hass.io Addons"
+    org.label-schema.vcs-url="https://github.com/haberda/" \
+    org.label-schema.vendor="No Vendor"
