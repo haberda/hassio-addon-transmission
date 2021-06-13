@@ -14,8 +14,8 @@ eval $(/sbin/ip route list match 0.0.0.0 | awk '{if($5!="tun0"){print "GW="$3"\n
 
 echo "adding route to local network ${localNet} via ${GW} dev ${INT}"
 
-/sbin/ip route del "$localNet"
+/sbin/ip route del "$localNet" || echo "Error deleting localNet rule, attempting to continue"
 
-/sbin/ip route add "${localNet}" via "${GW}" dev "${INT}"
+/sbin/ip route add "${localNet}" via "${GW}" dev "${INT}" || echo "Error adding localNet rule, attempting to continue. You may not be able to access Transmission from the LAN"
 
 exec /usr/bin/transmission-daemon --foreground --config-dir /data/transmission
