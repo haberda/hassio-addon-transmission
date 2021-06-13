@@ -132,14 +132,14 @@ jobs:
           load: true
           # yamllint disable rule:line-length
           tags: |
-            ghcr.io/hassio-addons/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.environment }}
-            ghcr.io/hassio-addons/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.version }}
+            ghcr.io/haberda/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.environment }}
+            ghcr.io/haberda/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.version }}
           # yamllint enable rule:line-length
           context: ${{ needs.information.outputs.target }}
           file: ${{ needs.information.outputs.target }}/Dockerfile
           cache-from: |
             type=local,src=/tmp/.docker-cache
-            ghcr.io/hassio-addons/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:edge
+            ghcr.io/haberda/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:edge
           cache-to: type=local,mode=max,dest=/tmp/.docker-cache
           platforms: ${{ steps.flags.outputs.platform }}
           build-args: |
@@ -155,6 +155,6 @@ jobs:
         # yamllint disable rule:line-length
         run: |
           docker push \
-            "ghcr.io/hassio-addons/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.environment }}"
+            "ghcr.io/haberda/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.environment }}"
           docker push \
-            "ghcr.io/hassio-addons/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.version }}"
+            "ghcr.io/haberda/${{ needs.information.outputs.slug }}/${{ matrix.architecture }}:${{ needs.information.outputs.version }}"
