@@ -84,17 +84,6 @@ Your OpenVPN password.
 This specifies the local LAN IP/Subnet scheme. This is to allow local LAN access when the VPN is enabled. 
 Most routers default to 192.168.1.0/24. If you don't know what yours is then leave it default.
 
-## Embedding into Home Assistant
-
-This addon supports ingress, thus it can simply be integrated into Home Assistant without having to forward any additional ports. Here is an example configuration:
-
-```yaml
-transmission:
-  host: f6fddefc-transmission
-```
-
-If you want, you can add an icon to the sidebar by toggling *Show in Sidebar* as well.
-
 ## Changelog & Releases
 
 The format of the log is based on
