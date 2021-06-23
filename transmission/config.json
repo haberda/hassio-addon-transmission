@@ -1,6 +1,6 @@
 {
     "name": "Transmission",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "slug": "transmission",
     "description": "The torrent client for Hass.io with OpenVPN support",
     "url": "https://github.com/pierrickrouxel/hassio-addon-transmission",
@@ -44,7 +44,8 @@
       "openvpn_enabled": false,
       "openvpn_config": "",
       "openvpn_username": "",
-      "openvpn_password": ""
+      "openvpn_password": "",
+      "local_network": "192.168.1.0/24"
     },
     "schema": {
       "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
@@ -54,7 +55,8 @@
       "openvpn_enabled": "bool",
       "openvpn_config": "str",
       "openvpn_username": "str",
-      "openvpn_password": "str"
+      "openvpn_password": "str",
+      "local_network": "str"
     },
     "environment": {
       "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
