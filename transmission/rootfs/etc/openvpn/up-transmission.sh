@@ -8,7 +8,7 @@ CONFIG=$(bashio::jq "${CONFIG}" ".\"bind-address-ipv4\"=\"0.0.0.0\"")
 
 echo "${CONFIG}" > /data/transmission/settings.json
 
-export localNet="192.168.1.0/24"
+export localNet=$(bashio::config 'local_network')
 
 eval $(/sbin/ip route list match 0.0.0.0 | awk '{if($5!="tun0"){print "GW="$3"\nINT="$5; exit}}')
 
