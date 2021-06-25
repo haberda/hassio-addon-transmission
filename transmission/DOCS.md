@@ -7,7 +7,8 @@ The torrent client for Hass.io with OpenVPN support.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Hass.io add-on.
 
-1. Add https://github.com/pierrickrouxel/hassio-addon-transmission.git to your Hass.io instance as a repository.
+1. Add [this](https://github.com/haberda/hassio_addons)
+to your Hass.io instance as a repository.
 1. Install the "Transmission" add-on.
 1. Start the "Transmission" add-on.
 1. Check the logs of the "Tranmission" to see if everything went well.
@@ -69,7 +70,8 @@ Enable OpenVPN to anonymize your torrent activity.
 
 ### Option: `openvpn_config`
 
-The name of .ovpn file WITHOUT the .ovpn extenstion (e.g. myFile.ovpn will be entered as myFile). Must be put it in `/config/openvpn`.
+The name of .ovpn file WITHOUT the .ovpn extenstion (e.g. myFile.ovpn will be entered as myFile).
+Must be put it in `/config/openvpn`.
 
 ### Option: `openvpn_username`
 
@@ -81,15 +83,17 @@ Your OpenVPN password.
 
 ### Option: local_network
 
-This specifies the local LAN IP/Subnet scheme. This is to allow local LAN access when the VPN is enabled. 
-Most routers default to 192.168.1.0/24. If you don't know what yours is then leave it default.
+This specifies the local LAN IP/Subnet scheme. This is to allow local LAN access when
+the VPN is enabled. Most routers default to 192.168.1.0/24.
+If you don't know what yours is then leave it default.
 
 ## Changelog & Releases
 
 The format of the log is based on
 [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
-Releases are based on [Semantic Versioning](http://semver.org/spec/v2.0.0.html), and use the format
+Releases are based on [Semantic Versioning](http://semver.org/spec/v2.0.0.html),
+and use the format
 of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
 based on the following:
 

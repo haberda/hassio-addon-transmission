@@ -1,8 +1,8 @@
-# This Add-on Has Moved!
+# This Add-on Has Moved
 
 This addon has moved to [this](https://github.com/haberda/hassio_addons) repository.
 
-# Transmission addon for Hass.io
+## Transmission addon for Hass.io
 
 The torrent client for Hass.io with OpenVPN support.
 
