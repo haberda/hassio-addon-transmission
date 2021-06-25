@@ -1,13 +1,11 @@
 {
     "name": "Transmission",
-    "version": "0.6.4",
+    "version": "dev",
     "slug": "transmission",
     "description": "The torrent client for Hass.io with OpenVPN support",
     "url": "https://github.com/pierrickrouxel/hassio-addon-transmission",
-    "webui": "http://[HOST]:[PORT:9091]/transmission/web/",
     "startup": "services",
     "ingress": "true",
-    "ingress_port": 8099,
     "panel_icon": "mdi:progress-download",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "map": [
@@ -16,7 +14,6 @@
       "share:rw",
       "ssl"
     ],
-    "boot": "auto",
     "ports": {
       "9091/tcp": null,
       "51413/tcp": 51413,
@@ -34,8 +31,6 @@
       "/dev/net/tun"
     ],
     "hassio_api": true,
-    "homeassistant_api": false,
-    "host_network": false,
     "options": {
       "log_level": "info",
       "authentication_required": false,
