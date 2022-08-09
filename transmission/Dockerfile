@@ -9,10 +9,10 @@ RUN ["chmod", "+x", "/etc/openvpn/up-transmission.sh"]
 
 # Setup base
 RUN apk add --no-cache \
-    coreutils=9.0-r2 \
-    nginx=1.20.2-r0 \
-    transmission-daemon=3.00-r5 \
-    openvpn=2.5.4-r0
+    coreutils=9.1-r0 \
+    nginx=1.22.0-r1 \
+    transmission-daemon=3.00-r6 \
+    openvpn=2.5.6-r1
 # Small hack needed for ingress support
 #
 # Transmission always uses "transmission" as a subdirectory in the URL, so the web interface can for instance be found at:
