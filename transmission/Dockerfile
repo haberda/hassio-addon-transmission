@@ -5,6 +5,12 @@ FROM ${BUILD_FROM}
 # Copy root filesystem
 COPY rootfs /
 
+RUN chmod -R +x /etc/cont-init.d/
+
+RUN chmod -R +x /etc/services.d/
+
+RUN chmod -R +x /etc/openvpn/
+
 RUN ["chmod", "+x", "/etc/openvpn/up-transmission.sh"]
 
 # Setup base
