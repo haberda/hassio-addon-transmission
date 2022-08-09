@@ -56,5 +56,6 @@
     "environment": {
       "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
     },
+    "init": false,
     "image": "ghcr.io/haberda/transmission/{arch}"
   }
