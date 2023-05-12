@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:13.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:14.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -15,10 +15,10 @@ RUN ["chmod", "+x", "/etc/openvpn/up-transmission.sh"]
 
 # Setup base
 RUN apk add --no-cache \
-    coreutils=9.1-r0 \
-    nginx=1.22.1-r0 \
-    transmission-daemon=3.00-r8 \
-    openvpn=2.5.8-r0
+    coreutils=9.3-r1 \
+    nginx=1.24.0-r3 \
+    transmission-daemon=4.0.3-r1 \
+    openvpn=2.6.3-r0
 # Small hack needed for ingress support
 #
 # Transmission always uses "transmission" as a subdirectory in the URL, so the web interface can for instance be found at:
