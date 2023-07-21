@@ -18,7 +18,7 @@ RUN apk add --no-cache \
     coreutils=9.3-r1 \
     nginx=1.24.0-r6 \
     transmission-daemon=4.0.3-r1 \
-    openvpn=2.6.4-r0
+    openvpn=2.6.5-r0
 # Small hack needed for ingress support
 #
 # Transmission always uses "transmission" as a subdirectory in the URL, so the web interface can for instance be found at:
